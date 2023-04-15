@@ -15,6 +15,8 @@ This is a template for creating a NovelCraft agent in Python.
 5. Run your agent by running `python src/main.py` in the root directory.
 
     To connect to a server other than `localhost:14514` with a different token, run `python src/main.py --host <server> --port <port> --token <token>`.
+    
+For more instructions, refer to [the documentation](https://novelcraft.games).
 
 ## License
 
