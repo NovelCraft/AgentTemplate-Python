@@ -15,4 +15,4 @@ RUN pip install -r requirements.txt
 RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
 USER appuser
 
-ENTRYPOINT python src/main.py
+ENTRYPOINT [ "python", "src/main.py" ]
