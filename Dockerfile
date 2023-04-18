@@ -1,5 +1,5 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3-slim
+FROM pypy:slim
 WORKDIR /app
 
 # Keeps Python from generating .pyc files in the container
