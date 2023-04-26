@@ -9,7 +9,7 @@ async def main():
 
     while True:
         # Required to keep the SDK alive
-        await asyncio.sleep(0)
+        await asyncio.sleep(0.1)
 
         agent = sdk.get_agent()
 
