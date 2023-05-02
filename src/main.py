@@ -1,4 +1,5 @@
 import asyncio
+import datetime
 
 import novelcraft.sdk as sdk
 
@@ -7,7 +8,12 @@ async def main():
     await sdk.initialize()
     sdk.get_logger().info('Hello, world!')
 
+    start_time = datetime.datetime.now()
+
     while True:
+        if (datetime.datetime.now() - start_time).total_seconds() > 60:
+            break
+
         # Required to keep the SDK alive
         await asyncio.sleep(0.1)
 
@@ -18,8 +24,8 @@ async def main():
 
         agent.set_movement(sdk.IAgent.MovementKind.FORWARD)
 
-    await ncsdk.finalize()
-    ncsdk.get_logger().info('Goodbye, world!')
+    await sdk.finalize()
+    sdk.get_logger().info('Goodbye, world!')
 
 if __name__ == '__main__':
     asyncio.run(main())
